@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prompting for ARC: Instruction Design for Grid Reasoning</title>
+
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <div class="container hero-inner">
+      <h1>Prompting for ARC: Instruction Design for Grid Reasoning</h1>
+
+      <p class="authors">Zhuoka Feng</p>
+      <p class="affiliations">Fudan University</p>
+
+      <div class="badges">
+        <a class="btn" href="ARC.pdf">
+          <span class="icon">📄</span>
+          Paper (PDF)
+        </a>
+
+        <a class="btn" href="mailto:23307130211@m.fudan.edu.cn">
+          <span class="icon">✉️</span>
+          Contact Author
+        </a>
+      </div>
+
+      <p class="small-note" style="margin-top:14px;">
+        Published as a conference paper at ICLR 2025
+      </p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section class="content" id="content">
+
+        <h2>Abstract</h2>
+        <p>
+          The Abstraction and Reasoning Corpus (ARC) evaluates a system’s ability to infer novel grid transformation
+          rules from only a few examples. Despite strong performance on many NLP benchmarks, large language models
+          (LLMs) still struggle with ARC’s discrete, compositional reasoning. In this work, we present a systematic
+          study of prompt engineering strategies for ARC. We design five base prompting strategies targeting different
+          failure modes: Minimal Prompting, Reasoned Prompting, Schema-Constrained Prompting, Reflective Prompting,
+          and Structured Few-shot Prompting. Building upon these strategies, we propose an Adaptive Selection method
+          that dynamically chooses the most suitable strategy based on task characteristics, combined with multi-agent
+          collaboration for iterative refinement. Experiments on val.jsonl show that our method achieves 66.7% accuracy,
+          outperforming all base strategies. On the more challenging val hard.jsonl, our method achieves approximately
+          four-fold improvement over the baseline. Through error analysis and case studies, we identify that rule error
+          is the dominant failure mode and reveal the complementary strengths of different prompting strategies for
+          abstract reasoning tasks.
+        </p>
+
+        <h2>Prompting Strategies</h2>
+        <p>
+          We design five base prompting strategies targeting distinct failure modes in ARC reasoning:
+        </p>
+        <ul>
+          <li>Minimal Prompting</li>
+          <li>Reasoned Prompting</li>
+          <li>Schema-Constrained Prompting</li>
+          <li>Reflective Prompting</li>
+          <li>Structured Few-shot Prompting</li>
+        </ul>
+
+        <h2>Adaptive Selection + Multi-Agent Refinement</h2>
+        <p>
+          Building on the base strategies, we introduce an Adaptive Selection method that chooses the most suitable
+          prompting strategy for each task based on its characteristics. We also incorporate multi-agent collaboration
+          to iteratively refine predictions and mitigate rule errors.
+        </p>
+
+        <h2>Results</h2>
+        <ul>
+          <li>66.7% accuracy on val.jsonl, outperforming all base strategies.</li>
+          <li>Approximately four-fold improvement on val hard.jsonl.</li>
+          <li>Error analysis shows rule error as the dominant failure mode and reveals complementary strengths of the strategies.</li>
+        </ul>
+
+      </section>
+    </div>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
